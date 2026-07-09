@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — All Hands Mobile Detailing</title>
+  <meta name="description" content="Get a quote from All Hands Mobile Detailing, serving the Tulsa metro area." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">All Hands <span>Mobile Detailing</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav id="primary-nav" class="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="nav-cta" aria-current="page">Get a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <h1>Get a Free Quote</h1>
+        <p>Tell us about your vehicle and what you're looking for, and we'll get back to you with a quote.</p>
+
+        <div class="contact-layout">
+          <!--
+            PLACEHOLDER: confirm with owner — Formspree endpoint ID below (xxxxxxxx)
+            is a placeholder. A real Formspree (or equivalent) account must be
+            created for the business before this form will actually deliver
+            submissions. See REVIEW-CHECKLIST.md.
+
+            Migration note: when this site moves to Netlify, replace the
+            Formspree action/method below with a native Netlify Forms setup,
+            e.g. <form name="contact" method="POST" data-netlify="true">
+            plus a hidden form-name input, per CLAUDE.md §7 / §11.
+          -->
+          <form action="https://formspree.io/f/xxxxxxxx" method="POST">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+            <div class="form-field">
+              <label for="service">Service Interested In</label>
+              <select id="service" name="service">
+                <option value="Interior Detail">Interior Detail</option>
+                <option value="Exterior Detail">Exterior Detail</option>
+                <option value="Full Detail">Full Detail</option>
+                <option value="Ceramic Coating & PPF">Ceramic Coating & PPF</option>
+                <option value="Not sure">Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="message">Vehicle & Details</label>
+              <textarea id="message" name="message" rows="4" placeholder="Year/make/model, condition, preferred date/time..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Request</button>
+          </form>
+
+          <aside class="service-area-card">
+            <h2>Service Area</h2>
+            <!-- PLACEHOLDER: confirm with owner — exact service area radius/zip list not yet provided -->
+            <p>
+              We currently serve the greater Tulsa metro area, roughly within a
+              25-mile radius of downtown Tulsa. Outside that range? Reach out
+              anyway — we may still be able to help.
+            </p>
+            <h2>Contact Info</h2>
+            <!-- PLACEHOLDER: confirm with owner — real phone/email/hours not yet provided -->
+            <p>(918) 555-0123<br />hello@allhandsdetailing.example<br />Mon–Sat, 8am–6pm</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <p class="brand">All Hands Mobile Detailing</p>
+          <p>Mobile auto detailing that comes to you — Tulsa, OK.</p>
+        </div>
+        <div class="footer-contact">
+          <!-- PLACEHOLDER: confirm with owner — real phone number not yet provided -->
+          <p>(918) 555-0123</p>
+          <!-- PLACEHOLDER: confirm with owner — real business hours not yet provided -->
+          <p>Mon–Sat, 8am–6pm</p>
+          <!-- PLACEHOLDER: confirm with owner — real service radius not yet provided -->
+          <p>Serving the Tulsa metro area</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <!-- PLACEHOLDER: confirm with owner — legal entity name/year for copyright -->
+      <p class="footer-copyright">© 2026 All Hands Mobile Detailing. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

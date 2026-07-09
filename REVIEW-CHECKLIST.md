@@ -5,44 +5,63 @@ This is a running log of every placeholder fact/copy in the site. Add a line her
 treated as fact-checked or ready for real customers until the owner confirms it and
 the line is checked off.
 
-## Global
-- [ ] Business name/branding, logo, and colors — currently a neutral navy/charcoal
-      placeholder palette in `css/` `:root` variables.
-- [ ] Contact phone number and email — placeholder throughout.
-- [ ] Service area radius (Tulsa metro) — placeholder distance/zip list.
-- [ ] Business hours / availability — placeholder.
+## Global (in every page footer + `css/styles.css`)
+- [ ] Brand colors/logo — placeholder navy (`#101826`) / charcoal (`#2d333d`) /
+      amber accent (`#d98324`) in `css/styles.css` `:root`. No real logo yet.
+- [ ] Phone number — placeholder `(918) 555-0123` in every page footer and on
+      `contact.html`.
+- [ ] Email — placeholder `hello@allhandsdetailing.example` on `contact.html`.
+- [ ] Business hours — placeholder "Mon–Sat, 8am–6pm" in every page footer and
+      on `contact.html`.
+- [ ] Service area radius — placeholder "Tulsa metro area" / "~25-mile radius
+      of downtown Tulsa" in footers and on `contact.html`.
+- [ ] Copyright line — placeholder "© 2026 All Hands Mobile Detailing" in every
+      footer; confirm real legal entity name.
 
-## Home
-- [ ] Hero headline/value prop copy — placeholder, owner to rewrite.
-- [ ] Testimonials — placeholder text, clearly marked as fake in an HTML comment and
-      visually (e.g. "sample testimonial" label).
+## Home (`index.html`)
+- [ ] Hero headline/subhead — draft marketing copy, owner to confirm or rewrite.
+- [ ] Testimonials (3) — fabricated samples, not real reviews. Marked with an
+      HTML comment and a visible "SAMPLE — NOT A REAL REVIEW" tag on each card.
+      Must be replaced with real reviews (or removed) before launch.
 
-## Services
-- [ ] Package tiers (interior / exterior / full detail / ceramic coating & PPF) —
-      names and inclusions are placeholder.
-- [ ] Pricing for every tier — placeholder numbers only.
-- [ ] Ceramic coating / PPF deposit policy (~30% pattern) — paraphrased placeholder,
-      original wording, not copied from any competitor/related-entity site.
-- [ ] Standard detail/tint deposit policy (~$50 pattern) — paraphrased placeholder,
-      original wording.
+## Services (`services.html`)
+- [ ] Four package tiers and their bullet inclusions (Interior Detail, Exterior
+      Detail, Full Detail, Ceramic Coating & PPF) — names/inclusions/pricing are
+      all placeholder draft content.
+- [ ] Pricing: Interior $89, Exterior $79, Full Detail $149, Ceramic Coating &
+      PPF from $599 — all placeholder numbers, not owner-confirmed.
+- [ ] Confirm whether Ceramic Coating and PPF should be split into two separate
+      packages/prices.
+- [ ] Deposit policy paragraph — paraphrased, original-wording placeholder based
+      on a pattern observed at a related domain (~$50 standard / ~30% ceramic
+      coating & PPF). NOT confirmed as this business's actual policy.
+- [ ] Rain-day policy paragraph — paraphrased, original-wording placeholder, not
+      confirmed as this business's actual policy.
 
-## Gallery
-- [ ] All images — Higgsfield-generated only, not real business photos. Confirm
-      owner is fine with AI-generated imagery for the demo, and swap for real photos
-      once available.
+## Gallery (`gallery.html`)
+- [ ] All 8 image placeholders (4 before/after pairs: Interior Deep Clean,
+      Exterior Wash & Wax, Full Detail, Ceramic Coating) — currently gray
+      striped placeholder boxes with alt text, wired to a click-to-enlarge
+      lightbox (`js/main.js`). To be replaced with Higgsfield-generated images
+      in the next build step, not real customer vehicle photos.
 
-## About
-- [ ] Bio / mission / story copy — placeholder, owner to rewrite entirely.
+## About (`about.html`)
+- [ ] Entire bio/mission copy — placeholder draft text, owner to rewrite
+      completely before launch.
 
-## Contact
-- [ ] Formspree endpoint ID — placeholder until a real Formspree (or equivalent)
-      account exists for the business.
-- [ ] Service area note — placeholder radius/wording.
+## Contact (`contact.html`)
+- [ ] Formspree endpoint — placeholder `https://formspree.io/f/xxxxxxxx`. Needs
+      a real Formspree (or equivalent) account created for the business before
+      the form will actually deliver submissions.
+- [ ] Netlify Forms migration note left as an HTML comment near the `<form>`
+      tag for when the site moves off GitHub Pages (see CLAUDE.md §7/§11).
+- [ ] Service area note — placeholder "~25-mile radius of downtown Tulsa".
+- [ ] Contact info block (phone/email/hours) — same placeholders as global.
 
-## Policies (Services page or footer/FAQ)
-- [ ] Rain-day / reschedule policy — paraphrased placeholder, original wording, not
-      copied from any competitor/related-entity site.
-- [ ] Cancellation policy — placeholder if/when added.
+## Policies (currently on `services.html`)
+- [ ] Deposit policy — see Services section above.
+- [ ] Rain-day policy — see Services section above.
+- [ ] Cancellation policy — not yet written; add if the owner wants one.
 
 ## Infrastructure
 - [ ] `CNAME` — not active yet; add once a domain is secured (see CLAUDE.md §11).
