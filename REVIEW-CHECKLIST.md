@@ -23,6 +23,11 @@ the line is checked off.
 - [ ] Testimonials (3) — fabricated samples, not real reviews. Marked with an
       HTML comment and a visible "SAMPLE — NOT A REAL REVIEW" tag on each card.
       Must be replaced with real reviews (or removed) before launch.
+- [ ] Hero background image (`assets/generated/hero-01.png`, set via CSS on
+      `.hero`) and highlight image (`assets/generated/hero-02.png`) are
+      Higgsfield-generated stock-style images, not real photos of this
+      business's work or vehicles. Must be swapped for real photos once the
+      owner provides them and grants usage rights.
 
 ## Services (`services.html`)
 - [ ] Four package tiers and their bullet inclusions (Interior Detail, Exterior
@@ -37,13 +42,17 @@ the line is checked off.
       coating & PPF). NOT confirmed as this business's actual policy.
 - [ ] Rain-day policy paragraph — paraphrased, original-wording placeholder, not
       confirmed as this business's actual policy.
+- [ ] Four tier icons (`assets/generated/icon-*.png`) are Higgsfield-generated
+      stock-style illustrations, not real branded imagery. Fine to keep as
+      generic icons, or swap once the owner has real branding.
 
 ## Gallery (`gallery.html`)
-- [ ] All 8 image placeholders (4 before/after pairs: Interior Deep Clean,
-      Exterior Wash & Wax, Full Detail, Ceramic Coating) — currently gray
-      striped placeholder boxes with alt text, wired to a click-to-enlarge
-      lightbox (`js/main.js`). To be replaced with Higgsfield-generated images
-      in the next build step, not real customer vehicle photos.
+- [ ] All 8 gallery images (4 before/after pairs: Interior Deep Clean, Exterior
+      Wash & Wax, Full Detail, Ceramic Coating — `assets/generated/gallery-*.png`)
+      are Higgsfield-generated stock-style images, wired to a click-to-enlarge
+      lightbox (`js/main.js`). These are NOT real photos of this business's work
+      or real customer vehicles — they must be swapped for real before/after
+      photos once the owner provides them and grants usage rights.
 
 ## About (`about.html`)
 - [ ] Entire bio/mission copy — placeholder draft text, owner to rewrite
@@ -65,5 +74,8 @@ the line is checked off.
 
 ## Infrastructure
 - [ ] `CNAME` — not active yet; add once a domain is secured (see CLAUDE.md §11).
-- [ ] Higgsfield API key — needs a real key in local `.env` before asset generation
-      script can run (never committed, never client-side).
+- [x] Higgsfield asset generation — `scripts/generate-assets.js` uses the
+      `higgsfield` CLI (not the `@higgsfield/client` npm SDK), authenticated via
+      `higgsfield auth login` on this machine rather than an API key in `.env`.
+      Re-run with `npm run generate-assets`, or regenerate specific files with
+      `node scripts/generate-assets.js <filename>.png ...`.

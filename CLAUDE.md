@@ -57,11 +57,15 @@
 
 ## 6. Visual Assets — Higgsfield
 - Do not use real business photos for this demo.
-- `scripts/generate-assets.js` (or `.py`): build-time script only, never client-side.
-  - Reads API key from local `.env` (`HIGGSFIELD_API_KEY` or similar) — `.env` is
-    git-ignored, key is never referenced in any browser-facing JS/HTML.
-  - Submits generation jobs, polls for completion, downloads finished images into
-    `/assets/generated/`.
+- `scripts/generate-assets.js`: build-time script only, never client-side.
+  - **Actual implementation note:** uses the `higgsfield` CLI (installed globally
+    on this machine, `flux_kontext` model) rather than the `@higgsfield/client`
+    npm SDK originally planned. Auth is via `higgsfield auth login` (device/browser
+    login, session stored by the CLI), not an API key in `.env`. No secrets are
+    read from or written to `.env` by this script. Re-run with
+    `npm run generate-assets`, or regenerate specific files with
+    `node scripts/generate-assets.js <filename>.png ...`.
+  - Submits generation jobs, downloads finished images into `/assets/generated/`.
   - Needed assets: 1–2 hero images, 3–4 before/after-style pairs for the gallery, a small
     set of service icons/imagery for the Services page.
   - Run this locally (you'll need a real Higgsfield API key in your own `.env` — I don't

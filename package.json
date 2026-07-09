@@ -1,0 +1,10 @@
+{
+  "name": "all-hands-detailing-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "All Hands Mobile Detailing — static demo site",
+  "scripts": {
+    "generate-assets": "node scripts/generate-assets.js"
+  }
+}
