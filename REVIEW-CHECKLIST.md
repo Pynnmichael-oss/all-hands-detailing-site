@@ -33,9 +33,15 @@ the line is checked off.
 
 ## Home (`index.html`)
 - [ ] Hero headline/subhead — draft marketing copy, owner to confirm or rewrite.
-- [ ] Testimonials (3) — fabricated samples, not real reviews. Marked with an
-      HTML comment and a visible "SAMPLE — NOT A REAL REVIEW" tag on each card.
-      Must be replaced with real reviews (or removed) before launch.
+- [ ] Reviews (4) — fabricated samples in `assets/data/reviews.json`, rendered
+      by `js/main.js` into the "What Customers Say" grid; each JSON entry is
+      tagged SAMPLE DATA and each card shows a visible "SAMPLE — NOT A REAL
+      REVIEW" tag. Must be replaced with real reviews (or removed) before launch.
+- [ ] Google Reviews — **blocked until the business's Google Business Profile
+      is confirmed/claimed by the owner**; plan is a third-party widget
+      (Elfsight or similar, free tier), not a custom API build, since this is
+      a static site with no backend. The widget embed slot is a commented TODO
+      block in `index.html` next to `#reviews-grid`.
 - [ ] Hero background image (`assets/generated/hero-01.png`, set via CSS on
       `.hero`) and highlight image (`assets/generated/hero-02.png`) are
       Higgsfield-generated stock-style images, not real photos of this

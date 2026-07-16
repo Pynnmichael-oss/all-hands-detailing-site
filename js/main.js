@@ -1,4 +1,42 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Review cards — rendered from assets/data/reviews.json (SAMPLE data only for
+  // now). The JSON mirrors the shape a Google Reviews widget/API response will
+  // eventually fill; when a real widget is embedded (see the TODO comment in
+  // index.html), this block and the JSON file go away.
+  const reviewsGrid = document.querySelector('#reviews-grid[data-reviews-src]');
+
+  if (reviewsGrid) {
+    fetch(reviewsGrid.dataset.reviewsSrc)
+      .then((response) => (response.ok ? response.json() : Promise.reject(new Error(response.statusText))))
+      .then((data) => {
+        (data.reviews || []).forEach((review) => {
+          const card = document.createElement('blockquote');
+          card.className = 'testimonial-card';
+
+          const stars = document.createElement('p');
+          stars.className = 'review-stars';
+          const rating = Math.max(0, Math.min(5, review.rating || 0));
+          stars.textContent = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+          stars.setAttribute('aria-label', rating + ' out of 5 stars');
+
+          const quote = document.createElement('p');
+          quote.textContent = '"' + review.quote + '"';
+
+          const cite = document.createElement('cite');
+          const meta = [review.name, review.location].filter(Boolean).join(', ');
+          cite.textContent = '— ' + meta + (review.relativeDate ? ' · ' + review.relativeDate : '');
+
+          card.append(stars, quote, cite);
+          reviewsGrid.appendChild(card);
+        });
+      })
+      .catch(() => {
+        const fallback = document.createElement('p');
+        fallback.textContent = 'Reviews are unavailable right now.';
+        reviewsGrid.appendChild(fallback);
+      });
+  }
+
   const navToggle = document.querySelector('.nav-toggle');
   const siteNav = document.querySelector('.site-nav');
 

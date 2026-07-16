@@ -65,17 +65,35 @@
         <h2>Why All Hands</h2>
         <div class="value-grid">
           <div class="value-card">
-            <div class="icon" aria-hidden="true">🚐</div>
+            <div class="icon" aria-hidden="true">
+              <!-- map pin: we travel to the customer's location -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 21.5S5 15.6 5 10a7 7 0 0 1 14 0c0 5.6-7 11.5-7 11.5Z" />
+                <circle cx="12" cy="10" r="2.6" />
+              </svg>
+            </div>
             <h3>We Come to You</h3>
             <p>Home, office, or job site — we bring professional-grade equipment and water to your location.</p>
           </div>
           <div class="value-card">
-            <div class="icon" aria-hidden="true">✨</div>
+            <div class="icon" aria-hidden="true">
+              <!-- checkmark in circle: quality / attention to detail -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <path d="m8.2 12.4 2.6 2.6 5-5.6" />
+              </svg>
+            </div>
             <h3>Detail-Obsessed</h3>
             <p>From interior deep cleans to streak-free windows, every job is treated like it's our own.</p>
           </div>
           <div class="value-card">
-            <div class="icon" aria-hidden="true">📅</div>
+            <div class="icon" aria-hidden="true">
+              <!-- clock: fast, convenient scheduling -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7.5V12l3.2 2" />
+              </svg>
+            </div>
             <h3>Easy Scheduling</h3>
             <p>Book online in minutes and get a confirmation — no phone tag required.</p>
           </div>
@@ -86,22 +104,24 @@
     <section class="testimonials">
       <div class="container">
         <h2>What Customers Say</h2>
-        <!-- PLACEHOLDER: confirm with owner — these are fabricated sample testimonials for demo purposes only, must be replaced with real reviews before launch -->
-        <p class="testimonial-note">The testimonials below are placeholder samples for this demo and are not real customer reviews.</p>
-        <div class="testimonial-grid">
-          <blockquote class="testimonial-card">
-            <p>"Showed up on time and my truck looked brand new inside and out. Super convenient."</p>
-            <cite>— Sample customer, Tulsa</cite>
-          </blockquote>
-          <blockquote class="testimonial-card">
-            <p>"They cleaned every window on the house and detailed my car in the same visit. Spotless."</p>
-            <cite>— Sample customer, Broken Arrow</cite>
-          </blockquote>
-          <blockquote class="testimonial-card">
-            <p>"Booked online, they came to my office parking lot, done before my lunch break ended."</p>
-            <cite>— Sample customer, Jenks</cite>
-          </blockquote>
-        </div>
+        <!-- PLACEHOLDER: confirm with owner — review cards below are rendered by js/main.js from
+             assets/data/reviews.json, which contains fabricated SAMPLE entries only. The JSON file
+             mirrors the shape a Google Reviews widget/API response will eventually fill. Must be
+             replaced with real reviews before launch. See REVIEW-CHECKLIST.md. -->
+        <p class="testimonial-note">The reviews below are placeholder samples for this demo and are not real customer reviews.</p>
+        <div class="testimonial-grid" id="reviews-grid" data-reviews-src="assets/data/reviews.json"></div>
+        <!--
+          TODO (Google Reviews — blocked on the owner claiming/confirming the business's
+          Google Business Profile): once the profile is connected, replace the JSON-driven
+          grid above with a third-party reviews widget embed (e.g. Elfsight Google Reviews,
+          free tier — chosen over a custom Places API build because this is a static site
+          with no backend to proxy an API key through). The widget's <script>/<div> embed
+          snippet drops in RIGHT HERE, and the #reviews-grid block plus the reviews.json
+          fetch in js/main.js can then be deleted.
+        -->
+        <noscript>
+          <p>Reviews require JavaScript to display in this demo.</p>
+        </noscript>
       </div>
     </section>
   </main>
@@ -109,12 +129,23 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
-        <div class="footer-brand">
+        <div class="footer-col footer-brand">
           <img class="footer-logo" src="assets/logo/all-hands-logo-white.png" alt="All Hands Mobile Detailing" />
           <p class="footer-tagline">The People&rsquo;s Company</p>
           <p>Mobile detailing &amp; window cleaning that comes to you — Tulsa, OK.</p>
         </div>
-        <div class="footer-contact">
+        <nav class="footer-col" aria-label="Footer">
+          <h4 class="footer-heading">Quick Links</h4>
+          <div class="footer-nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </nav>
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact &amp; Service Area</h4>
           <!-- PLACEHOLDER: confirm with owner — real phone number not yet provided -->
           <p>(918) 555-0123</p>
           <!-- PLACEHOLDER: confirm with owner — real business hours not yet provided -->
@@ -122,16 +153,13 @@
           <!-- PLACEHOLDER: confirm with owner — real service radius not yet provided -->
           <p>Serving the Tulsa metro area</p>
         </div>
-        <nav class="footer-nav" aria-label="Footer">
-          <a href="index.html">Home</a>
-          <a href="services.html">Services</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </nav>
       </div>
-      <!-- PLACEHOLDER: confirm with owner — legal entity name/year for copyright -->
-      <p class="footer-copyright">© 2026 All Hands Mobile Detailing. All rights reserved.</p>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <!-- PLACEHOLDER: confirm with owner — legal entity name/year for copyright -->
+        <p class="footer-copyright">© 2026 All Hands Mobile Detailing. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 

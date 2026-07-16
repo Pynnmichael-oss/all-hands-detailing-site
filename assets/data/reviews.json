@@ -1,0 +1,37 @@
+{
+  "_comment": "SAMPLE DATA — every entry below is fabricated placeholder content for the demo build, NOT a real customer review. This file mirrors the shape a Google Reviews widget/API response will eventually fill (see the TODO block in index.html and REVIEW-CHECKLIST.md). Delete this file once a real reviews widget is embedded.",
+  "reviews": [
+    {
+      "_comment": "SAMPLE DATA — fabricated for demo",
+      "name": "Jordan T.",
+      "rating": 5,
+      "quote": "Showed up on time and my truck looked brand new inside and out. Super convenient.",
+      "relativeDate": "2 weeks ago",
+      "location": "Tulsa"
+    },
+    {
+      "_comment": "SAMPLE DATA — fabricated for demo",
+      "name": "Sam R.",
+      "rating": 5,
+      "quote": "They cleaned every window on the house and detailed my car in the same visit. Spotless.",
+      "relativeDate": "a month ago",
+      "location": "Broken Arrow"
+    },
+    {
+      "_comment": "SAMPLE DATA — fabricated for demo",
+      "name": "Casey M.",
+      "rating": 4,
+      "quote": "Booked online, they came to my office parking lot, done before my lunch break ended.",
+      "relativeDate": "3 weeks ago",
+      "location": "Jenks"
+    },
+    {
+      "_comment": "SAMPLE DATA — fabricated for demo",
+      "name": "Riley P.",
+      "rating": 5,
+      "quote": "Storefront glass has never looked better. Easy to schedule, fair price.",
+      "relativeDate": "2 months ago",
+      "location": "Owasso"
+    }
+  ]
+}
