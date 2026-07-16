@@ -12,6 +12,9 @@ the line is checked off.
       `favicon.ico`, `apple-touch-icon.png`, and `icon-512.png` at repo root,
       wired into the `<head>` of all five pages. Footer carries the official
       "The People's Company" tagline as part of the brand lockup.
+- [x] **Business address — CONFIRMED (2026-07-16).** 411 S Elgin Ave, Tulsa, OK
+      74120 — shown in the footer contact column (with an embedded Google Map)
+      and on `contact.html`.
 - [x] **Service scope — CONFIRMED (2026-07-16).** The site covers **Mobile
       Detailing and Window Cleaning only**. Ceramic coating, PPF, transportation,
       and moving services are **permanently dropped from scope** — not pending
@@ -33,6 +36,15 @@ the line is checked off.
 
 ## Home (`index.html`)
 - [ ] Hero headline/subhead — draft marketing copy, owner to confirm or rewrite.
+- [ ] Trust bar claims (insured, background-checked) — confirm these are
+      actually true before launch, currently placeholder assertions.
+      ("Satisfaction Focused" and "We Come to You" are soft/confirmed;
+      "Mobile or Drop-Off" was deliberately NOT used since drop-off service
+      is unconfirmed.)
+- [ ] Card eyebrow labels (Most Popular / Refresh / Membership / Home &
+      Business, on Home and Services cards) — draft merchandising labels;
+      confirm the owner agrees Full Detail is the flagship "Most Popular"
+      tier.
 - [ ] "Our Services" quick-glance cards — service names (Full Detail, Half
       Detail, All Hands Membership, Window Cleaning), one-line descriptions,
       and "From $X" starting prices are all draft placeholders mirroring
@@ -68,6 +80,10 @@ the line is checked off.
 - [ ] All Hands Membership — pricing model, billing cadence, and per-visit
       inclusions are entirely assumed draft content; confirm how the real
       membership works.
+- [ ] FAQ accordion — answers use only already-logged placeholder info; the
+      water/electricity answer (equipment/onboard water setup) and the job
+      duration answer are kept generic and need owner confirmation, as does
+      the membership answer (tied to the membership card above).
 - [ ] Window Cleaning tier — confirm whether it covers home windows, business
       storefronts, or both, and what's included (screens, sills/tracks,
       interior + exterior).

@@ -8,6 +8,9 @@
   <link rel="icon" href="favicon.ico" />
   <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -49,13 +52,16 @@
              targets for the teaser links on the Home page — keep them stable. -->
         <div class="pricing-grid">
           <article class="pricing-card featured" id="full-detail">
+            <p class="card-eyebrow eyebrow-badge">Most Popular</p>
             <img class="tier-icon" src="assets/generated/icon-full-detail.png" alt="" loading="lazy" />
             <h3>Full Detail</h3>
             <p class="price">$149 <span class="unit">starting</span></p>
             <!-- PLACEHOLDER: confirm with owner — price and inclusions for Full Detail (complete interior + exterior) -->
-            <ul>
-              <li>Complete interior: vacuum, dash, panels, glass</li>
-              <li>Complete exterior: hand wash, wheels, wax sealant</li>
+            <ul class="checklist">
+              <li>Full interior vacuum &amp; wipe-down</li>
+              <li>Dash, panels &amp; interior glass</li>
+              <li>Exterior hand wash &amp; wheels</li>
+              <li>Protective wax sealant</li>
               <li>Leather/vinyl conditioning</li>
               <li>Tire shine finish</li>
             </ul>
@@ -63,43 +69,56 @@
           </article>
 
           <article class="pricing-card" id="half-detail">
+            <p class="card-eyebrow">Refresh</p>
             <img class="tier-icon" src="assets/generated/icon-half-detail.png" alt="" loading="lazy" />
             <h3>Half Detail</h3>
             <p class="price">$89 <span class="unit">starting</span></p>
             <!-- PLACEHOLDER: confirm with owner — price, inclusions, and definition of Half Detail (assumed: interior-only OR exterior-only, customer's choice) -->
-            <ul>
-              <li>Your choice: interior-only or exterior-only</li>
-              <li>Interior: full vacuum, wipe-down, glass</li>
+            <h4 class="checklist-heading">Pick One Side</h4>
+            <ul class="checklist">
+              <li>Interior: vacuum, wipe-down, glass</li>
               <li>Exterior: hand wash, wheels, spray wax</li>
-              <li>Great between full details</li>
+            </ul>
+            <h4 class="checklist-heading">Good For</h4>
+            <ul class="checklist">
+              <li>Upkeep between full details</li>
+              <li>Pre-sale touch-ups</li>
             </ul>
             <a class="btn btn-secondary" href="contact.html">Get a Quote</a>
           </article>
 
           <article class="pricing-card" id="membership">
+            <p class="card-eyebrow">Membership</p>
             <img class="tier-icon" src="assets/generated/icon-membership.png" alt="" loading="lazy" />
             <h3>All Hands Membership</h3>
             <p class="price">$59<span class="unit">/mo starting</span></p>
             <!-- PLACEHOLDER: confirm with owner — membership pricing model, billing cadence, and what's included per visit; all of this block is an assumed draft -->
-            <ul>
-              <li>Recurring scheduled visits, priority booking</li>
-              <li>Member pricing on full &amp; half details</li>
-              <li>Window cleaning add-on discounts</li>
+            <h4 class="checklist-heading">What's Included</h4>
+            <ul class="checklist">
+              <li>Recurring scheduled visits</li>
+              <li>Member pricing on all services</li>
+              <li>Window cleaning discounts</li>
+            </ul>
+            <h4 class="checklist-heading">How It Works</h4>
+            <ul class="checklist">
+              <li>Pick a cadence, we handle the rest</li>
+              <li>Priority booking windows</li>
               <li>Pause or cancel anytime</li>
             </ul>
             <a class="btn btn-secondary" href="contact.html">Get a Quote</a>
           </article>
 
           <article class="pricing-card" id="window-cleaning">
+            <p class="card-eyebrow">Home &amp; Business</p>
             <img class="tier-icon" src="assets/generated/icon-window-cleaning.png" alt="" loading="lazy" />
             <h3>Window Cleaning</h3>
             <p class="price">$99 <span class="unit">starting</span></p>
             <!-- PLACEHOLDER: confirm with owner — price and inclusions for Window Cleaning, and whether it covers home windows, business storefronts, or both -->
-            <ul>
-              <li>Exterior &amp; interior window washing</li>
+            <ul class="checklist">
+              <li>Exterior &amp; interior washing</li>
               <li>Screens wiped down</li>
               <li>Sills &amp; tracks detailed</li>
-              <li>Streak-free finish, home or business</li>
+              <li>Streak-free finish</li>
             </ul>
             <a class="btn btn-secondary" href="contact.html">Get a Quote</a>
           </article>
@@ -125,17 +144,84 @@
             charge.
           </p>
         </div>
+
+        <div class="faq-block">
+          <h2>Frequently Asked Questions</h2>
+
+          <details class="faq-item">
+            <summary>How do I book a service?</summary>
+            <p>
+              Send a quote request through our <a href="contact.html">contact
+              form</a> with your vehicle (or windows) and preferred timing, and
+              we'll get back to you to confirm a slot. A small deposit holds
+              your appointment — see the booking policies above.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do you come to my home or office?</summary>
+            <p>
+              Yes — every service is mobile. We come to your home, office, or
+              job site anywhere in the Tulsa metro area.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What if I don't have access to water or electricity?</summary>
+            <!-- PLACEHOLDER: confirm with owner — exact equipment setup (onboard water/power capacity) not confirmed; wording kept generic -->
+            <p>
+              We bring professional-grade equipment and our own water, so most
+              locations need nothing from you. If your spot has unusual
+              constraints (a parking garage, no nearby access), mention it when
+              booking and we'll plan around it.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How long does a typical detail take?</summary>
+            <!-- PLACEHOLDER: confirm with owner — average job durations not confirmed; wording kept generic -->
+            <p>
+              It depends on the vehicle's size and condition — a half detail is
+              quicker, a full detail takes longer. We'll give you a time
+              estimate with your quote so you can plan your day.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What's included in the membership?</summary>
+            <!-- PLACEHOLDER: confirm with owner — membership details are an assumed draft, see the membership card above -->
+            <p>
+              Recurring scheduled visits at member pricing, priority booking,
+              and discounts on add-ons like window cleaning — see the
+              <a href="#membership">All Hands Membership</a> card above.
+              Exact plan details are being finalized with the owner.
+            </p>
+          </details>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-inner">
-        <div class="footer-col footer-brand">
-          <img class="footer-logo" src="assets/logo/all-hands-logo-white.png" alt="All Hands Mobile Detailing" />
+      <div class="footer-brand-row">
+        <img class="footer-logo" src="assets/logo/all-hands-logo-white.png" alt="All Hands Mobile Detailing" />
+        <div>
           <p class="footer-tagline">The People&rsquo;s Company</p>
           <p>Mobile detailing &amp; window cleaning that comes to you — Tulsa, OK.</p>
+        </div>
+      </div>
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact &amp; Service Area</h4>
+          <p>411 S Elgin Ave, Tulsa, OK 74120</p>
+          <!-- PLACEHOLDER: confirm with owner — real phone number not yet provided -->
+          <p>(918) 555-0123</p>
+          <!-- PLACEHOLDER: confirm with owner — real business hours not yet provided -->
+          <p>Mon–Sat, 8am–6pm</p>
+          <!-- PLACEHOLDER: confirm with owner — real service radius not yet provided -->
+          <p>Serving the Tulsa metro area</p>
+          <iframe class="footer-map" src="https://maps.google.com/maps?q=411%20S%20Elgin%20Ave%2C%20Tulsa%2C%20OK%2074120&amp;output=embed" title="Map: All Hands Mobile Detailing, 411 S Elgin Ave, Tulsa, OK 74120" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <nav class="footer-col" aria-label="Footer">
           <h4 class="footer-heading">Quick Links</h4>
@@ -147,15 +233,15 @@
             <a href="contact.html">Contact</a>
           </div>
         </nav>
-        <div class="footer-col">
-          <h4 class="footer-heading">Contact &amp; Service Area</h4>
-          <!-- PLACEHOLDER: confirm with owner — real phone number not yet provided -->
-          <p>(918) 555-0123</p>
-          <!-- PLACEHOLDER: confirm with owner — real business hours not yet provided -->
-          <p>Mon–Sat, 8am–6pm</p>
-          <!-- PLACEHOLDER: confirm with owner — real service radius not yet provided -->
-          <p>Serving the Tulsa metro area</p>
-        </div>
+        <nav class="footer-col" aria-label="Services">
+          <h4 class="footer-heading">Services</h4>
+          <div class="footer-nav-links">
+            <a href="services.html#full-detail">Full Detail</a>
+            <a href="services.html#half-detail">Half Detail</a>
+            <a href="services.html#membership">All Hands Membership</a>
+            <a href="services.html#window-cleaning">Window Cleaning</a>
+          </div>
+        </nav>
       </div>
     </div>
     <div class="footer-bottom">

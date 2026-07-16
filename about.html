@@ -8,6 +8,9 @@
   <link rel="icon" href="favicon.ico" />
   <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -103,11 +106,24 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-inner">
-        <div class="footer-col footer-brand">
-          <img class="footer-logo" src="assets/logo/all-hands-logo-white.png" alt="All Hands Mobile Detailing" />
+      <div class="footer-brand-row">
+        <img class="footer-logo" src="assets/logo/all-hands-logo-white.png" alt="All Hands Mobile Detailing" />
+        <div>
           <p class="footer-tagline">The People&rsquo;s Company</p>
           <p>Mobile detailing &amp; window cleaning that comes to you — Tulsa, OK.</p>
+        </div>
+      </div>
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact &amp; Service Area</h4>
+          <p>411 S Elgin Ave, Tulsa, OK 74120</p>
+          <!-- PLACEHOLDER: confirm with owner — real phone number not yet provided -->
+          <p>(918) 555-0123</p>
+          <!-- PLACEHOLDER: confirm with owner — real business hours not yet provided -->
+          <p>Mon–Sat, 8am–6pm</p>
+          <!-- PLACEHOLDER: confirm with owner — real service radius not yet provided -->
+          <p>Serving the Tulsa metro area</p>
+          <iframe class="footer-map" src="https://maps.google.com/maps?q=411%20S%20Elgin%20Ave%2C%20Tulsa%2C%20OK%2074120&amp;output=embed" title="Map: All Hands Mobile Detailing, 411 S Elgin Ave, Tulsa, OK 74120" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <nav class="footer-col" aria-label="Footer">
           <h4 class="footer-heading">Quick Links</h4>
@@ -119,15 +135,15 @@
             <a href="contact.html">Contact</a>
           </div>
         </nav>
-        <div class="footer-col">
-          <h4 class="footer-heading">Contact &amp; Service Area</h4>
-          <!-- PLACEHOLDER: confirm with owner — real phone number not yet provided -->
-          <p>(918) 555-0123</p>
-          <!-- PLACEHOLDER: confirm with owner — real business hours not yet provided -->
-          <p>Mon–Sat, 8am–6pm</p>
-          <!-- PLACEHOLDER: confirm with owner — real service radius not yet provided -->
-          <p>Serving the Tulsa metro area</p>
-        </div>
+        <nav class="footer-col" aria-label="Services">
+          <h4 class="footer-heading">Services</h4>
+          <div class="footer-nav-links">
+            <a href="services.html#full-detail">Full Detail</a>
+            <a href="services.html#half-detail">Half Detail</a>
+            <a href="services.html#membership">All Hands Membership</a>
+            <a href="services.html#window-cleaning">Window Cleaning</a>
+          </div>
+        </nav>
       </div>
     </div>
     <div class="footer-bottom">

@@ -21,9 +21,14 @@
 
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif;
+  /* Display face echoes the bold condensed poster/screen-print feel of the logo.
+     Used ONLY for headlines, badges, and buttons — body text stays --font-sans. */
+  --font-display: "Oswald", "Arial Narrow", var(--font-sans);
 
-  --radius-sm: 6px;
-  --radius: 10px;
+  /* Sharper corners to match the logo's poster aesthetic — noticeably less
+     "bubbly" than the previous 6/10px, but not fully square. */
+  --radius-sm: 3px;
+  --radius: 5px;
   --shadow-sm: 0 1px 3px rgba(16, 24, 38, 0.08);
   --shadow: 0 4px 16px rgba(16, 24, 38, 0.12);
 
@@ -74,6 +79,15 @@ h4 {
   margin: 0 0 var(--space-2);
 }
 
+/* Poster-style headlines: bold condensed display face, uppercase */
+h1,
+h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
+}
+
 h1 {
   font-size: clamp(2rem, 4vw + 1rem, 3rem);
 }
@@ -116,8 +130,11 @@ select:focus-visible {
   border: none;
   border-radius: var(--radius-sm);
   padding: 0.85rem 1.75rem;
-  font-size: 1rem;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
   font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.15s ease, transform 0.15s ease;
@@ -336,6 +353,64 @@ select:focus-visible {
 }
 
 /* -------------------------------------------------------------------------
+   Trust bar — slim single line under the hero, not a card grid
+   ------------------------------------------------------------------------- */
+.trust-bar {
+  background: var(--color-navy-light);
+  color: rgba(255, 255, 255, 0.92);
+  border-bottom: 3px solid var(--color-accent);
+}
+
+.trust-bar-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem var(--space-4);
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+
+.trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.trust-item svg {
+  width: 15px;
+  height: 15px;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* -------------------------------------------------------------------------
+   Card eyebrows & "Most Popular" badge
+   ------------------------------------------------------------------------- */
+.card-eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  margin: 0 0 0.5rem;
+}
+
+.card-eyebrow.eyebrow-badge {
+  display: inline-block;
+  background: var(--color-accent);
+  color: #fff;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-sm);
+}
+
+/* -------------------------------------------------------------------------
    Home: "Our Services" quick-glance cards
    ------------------------------------------------------------------------- */
 .svc-grid {
@@ -385,6 +460,11 @@ select:focus-visible {
 .svc-card .icon svg {
   width: 44px;
   height: 44px;
+}
+
+.svc-card.featured {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow);
 }
 
 .svc-card h3 {
@@ -641,6 +721,102 @@ select:focus-visible {
   margin-bottom: 0.4rem;
 }
 
+/* Checklist-format inclusions: amber check + short scannable line */
+.checklist,
+.pricing-card ul.checklist {
+  list-style: none;
+  margin: 0 0 var(--space-2);
+  padding: 0;
+  flex-grow: 0;
+}
+
+.pricing-card ul.checklist:last-of-type {
+  flex-grow: 1;
+}
+
+.checklist li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.45rem;
+  font-size: 0.95rem;
+}
+
+.checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  width: 1rem;
+  height: 1rem;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23d98324" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.checklist-heading {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin: var(--space-2) 0 0.5rem;
+}
+
+/* -------------------------------------------------------------------------
+   FAQ accordion (native details/summary — no JS)
+   ------------------------------------------------------------------------- */
+.faq-block {
+  margin-top: var(--space-4);
+}
+
+.faq-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  margin-bottom: var(--space-1);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: var(--space-2) var(--space-3);
+  font-weight: 700;
+  position: relative;
+  padding-right: 3rem;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.faq-item[open] summary::after {
+  content: "–";
+}
+
+.faq-item p {
+  padding: 0 var(--space-3) var(--space-2);
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.faq-item a {
+  color: var(--color-accent-dark);
+}
+
 .policy-block {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -861,8 +1037,32 @@ select:focus-visible {
   padding-top: var(--space-4);
 }
 
+/* Brand lockup row above the link columns */
+.footer-brand-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-2);
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+@media (min-width: 768px) {
+  .footer-brand-row {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+  }
+}
+
+.footer-brand-row p:last-child {
+  margin: 0;
+}
+
 /* Mobile-first: stacked, centered columns with even spacing;
-   desktop: three top-aligned columns (brand | quick links | contact) */
+   desktop: three top-aligned columns (contact+map | quick links | services) */
 .footer-inner {
   display: grid;
   gap: var(--space-4);
@@ -874,7 +1074,7 @@ select:focus-visible {
 
 @media (min-width: 768px) {
   .footer-inner {
-    grid-template-columns: 2fr 1fr 1.5fr;
+    grid-template-columns: 1.6fr 1fr 1fr;
     align-items: start;
     justify-items: start;
     text-align: left;
@@ -882,8 +1082,29 @@ select:focus-visible {
   }
 }
 
+.footer-col {
+  width: 100%;
+  max-width: 420px;
+}
+
+@media (min-width: 768px) {
+  .footer-col {
+    max-width: none;
+  }
+}
+
 .footer-col p {
   margin: 0 0 0.4rem;
+}
+
+.footer-map {
+  display: block;
+  width: 100%;
+  height: 180px;
+  border: 0;
+  border-radius: var(--radius);
+  margin-top: var(--space-2);
+  filter: grayscale(25%);
 }
 
 .footer-heading {
@@ -900,13 +1121,7 @@ select:focus-visible {
   display: block;
   max-height: 84px;
   width: auto;
-  margin: 0 auto var(--space-1);
-}
-
-@media (min-width: 768px) {
-  .footer-logo {
-    margin-left: 0;
-  }
+  flex-shrink: 0;
 }
 
 .footer-tagline {
