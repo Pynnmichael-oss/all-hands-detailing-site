@@ -63,15 +63,13 @@ const jobs = [
     aspect_ratio: '4:3',
     prompt: `Photo of the same style generic sedan interior after detailing — spotless dashboard, vacuumed seats, streak-free glass, plain unbranded steering wheel center. ${STYLE_SUFFIX}`,
   },
-  {
-    filename: 'gallery-before-02.png',
-    aspect_ratio: '4:3',
-    prompt: `Photo of a generic sedan exterior covered in road grime and dust, parked in a driveway, plain unbranded front grille. ${STYLE_SUFFIX}`,
-  },
+  // Note: gallery-before-02 was dropped (weak "before" — car rendered too clean) and the
+  // exterior pair removed from the gallery; gallery-after-02 is kept because the Home page
+  // membership breakout reuses it.
   {
     filename: 'gallery-after-02.png',
     aspect_ratio: '4:3',
-    prompt: `Photo of the same style generic sedan exterior after a wash and wax — glossy clean paint, shining wheels. ${STYLE_SUFFIX}`,
+    prompt: `Photo of a generic sedan exterior after a wash and wax — glossy clean paint, shining wheels. ${STYLE_SUFFIX}`,
   },
   {
     filename: 'gallery-before-03.png',
@@ -98,14 +96,14 @@ const jobs = [
 
   // Service tier icons/imagery (4)
   {
-    filename: 'icon-interior-detail.png',
+    filename: 'icon-half-detail.png',
     aspect_ratio: '1:1',
-    prompt: `Icon representing car interior detailing — a vacuum and a car seat silhouette. ${ICON_STYLE_SUFFIX}`,
+    prompt: `Icon representing a half car detail — a car silhouette split down the middle, one half sparkling clean with shine lines. ${ICON_STYLE_SUFFIX}`,
   },
   {
-    filename: 'icon-exterior-detail.png',
+    filename: 'icon-membership.png',
     aspect_ratio: '1:1',
-    prompt: `Icon representing car exterior washing — a soap bucket and sponge with a car silhouette. ${ICON_STYLE_SUFFIX}`,
+    prompt: `Icon representing a membership plan — a loyalty card or badge with a star and a circular repeat arrow. ${ICON_STYLE_SUFFIX}`,
   },
   {
     filename: 'icon-full-detail.png',

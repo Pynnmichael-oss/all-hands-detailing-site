@@ -33,6 +33,14 @@ the line is checked off.
 
 ## Home (`index.html`)
 - [ ] Hero headline/subhead — draft marketing copy, owner to confirm or rewrite.
+- [ ] "Our Services" quick-glance cards — service names (Full Detail, Half
+      Detail, All Hands Membership, Window Cleaning), one-line descriptions,
+      and "From $X" starting prices are all draft placeholders mirroring
+      `services.html` (which stays the source of truth for pricing).
+- [ ] Four expanded service teaser sections — all four paragraphs are draft
+      marketing copy; supporting images are Higgsfield-generated stock-style
+      (reused from the gallery/hero set), not real photos of this business's
+      work.
 - [ ] Reviews (4) — fabricated samples in `assets/data/reviews.json`, rendered
       by `js/main.js` into the "What Customers Say" grid; each JSON entry is
       tagged SAMPLE DATA and each card shows a visible "SAMPLE — NOT A REAL
@@ -49,11 +57,17 @@ the line is checked off.
       owner provides them and grants usage rights.
 
 ## Services (`services.html`)
-- [ ] Four service tiers and their bullet inclusions (Interior Detail, Exterior
-      Detail, Full Detail, Window Cleaning) — names/inclusions/pricing are
-      all placeholder draft content.
-- [ ] Pricing: Interior $89, Exterior $79, Full Detail $149, Window Cleaning
-      $99 — all placeholder numbers, not owner-confirmed.
+- [ ] Four service tiers and their bullet inclusions (Full Detail, Half Detail,
+      All Hands Membership, Window Cleaning — lineup updated 2026-07-16,
+      replacing the earlier Interior/Exterior split) — names/inclusions/pricing
+      are all placeholder draft content.
+- [ ] Pricing: Full Detail $149, Half Detail $89, Membership $59/mo, Window
+      Cleaning $99 — all placeholder numbers, not owner-confirmed.
+- [ ] Half Detail definition — assumed "interior-only OR exterior-only,
+      customer's choice"; confirm what the owner actually means by it.
+- [ ] All Hands Membership — pricing model, billing cadence, and per-visit
+      inclusions are entirely assumed draft content; confirm how the real
+      membership works.
 - [ ] Window Cleaning tier — confirm whether it covers home windows, business
       storefronts, or both, and what's included (screens, sills/tracks,
       interior + exterior).
@@ -73,16 +87,25 @@ the line is checked off.
       or swap once the owner has real branding.
 
 ## Gallery (`gallery.html`)
-- [ ] All 8 gallery images (4 before/after pairs: Interior Deep Clean, Exterior
-      Wash & Wax, Full Detail, Window Cleaning — `assets/generated/gallery-*.png`)
-      are Higgsfield-generated stock-style images, wired to a click-to-enlarge
-      lightbox (`js/main.js`). These are NOT real photos of this business's work
-      or real customer vehicles — they must be swapped for real before/after
-      photos once the owner provides them and grants usage rights.
+- [ ] All 6 gallery images (3 before/after pairs: Interior Deep Clean, Full
+      Detail, Window Cleaning — `assets/generated/gallery-*.png`; the weak
+      Exterior Wash & Wax pair was cut 2026-07-16) are Higgsfield-generated
+      stock-style images, wired to a click-to-enlarge lightbox (`js/main.js`).
+      These are NOT real photos of this business's work or real customer
+      vehicles — they must be swapped for real before/after photos once the
+      owner provides them and grants usage rights.
 
 ## About (`about.html`)
 - [ ] Entire bio/mission copy — placeholder draft text, owner to rewrite
       completely before launch.
+- [ ] Mission & values section and founding-story ("How We Got Started")
+      section — both are generic placeholder drafts (added 2026-07-16); still
+      open, unconfirmed items pending the owner's real story and wording.
+- [ ] Owner/team photo — open item pending the owner. The "Meet the Owner"
+      block ships with a neutral gray "Photo coming soon" placeholder slot,
+      deliberately NOT a stock or AI-generated photo of a person; only a real
+      photo provided by the owner goes here. Bio text in that block is also
+      placeholder.
 
 ## Contact (`contact.html`)
 - [ ] Formspree endpoint — placeholder `https://formspree.io/f/xxxxxxxx`. Needs
@@ -92,6 +115,9 @@ the line is checked off.
       tag for when the site moves off GitHub Pages (see CLAUDE.md §7/§11).
 - [ ] Service area note — placeholder "~25-mile radius of downtown Tulsa".
 - [ ] Contact info block (phone/email/hours) — same placeholders as global.
+- [ ] "Service Interested In" dropdown — options updated 2026-07-16 to match
+      the new lineup (Full Detail, Half Detail, All Hands Membership, Window
+      Cleaning); confirm along with the tier names.
 
 ## Policies (currently on `services.html`)
 - [ ] Deposit policy — see Services section above.

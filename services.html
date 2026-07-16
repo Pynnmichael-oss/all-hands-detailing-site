@@ -45,50 +45,52 @@
           and size of windows for window cleaning.</p>
 
         <!-- PLACEHOLDER: confirm with owner — tier icons below are Higgsfield-generated stock-style illustrations; see REVIEW-CHECKLIST.md -->
+        <!-- Section ids (full-detail, half-detail, membership, window-cleaning) are anchor
+             targets for the teaser links on the Home page — keep them stable. -->
         <div class="pricing-grid">
-          <article class="pricing-card">
-            <img class="tier-icon" src="assets/generated/icon-interior-detail.png" alt="" loading="lazy" />
-            <h3>Interior Detail</h3>
-            <p class="price">$89 <span class="unit">starting</span></p>
-            <!-- PLACEHOLDER: confirm with owner — price and inclusions for Interior Detail tier -->
-            <ul>
-              <li>Full vacuum — seats, carpets, trunk</li>
-              <li>Dash, console & door panel wipe-down</li>
-              <li>Interior glass cleaned</li>
-              <li>Steam-cleaned cupholders & vents</li>
-            </ul>
-            <a class="btn btn-secondary" href="contact.html">Get a Quote</a>
-          </article>
-
-          <article class="pricing-card">
-            <img class="tier-icon" src="assets/generated/icon-exterior-detail.png" alt="" loading="lazy" />
-            <h3>Exterior Detail</h3>
-            <p class="price">$79 <span class="unit">starting</span></p>
-            <!-- PLACEHOLDER: confirm with owner — price and inclusions for Exterior Detail tier -->
-            <ul>
-              <li>Hand wash & dry</li>
-              <li>Wheel & tire cleaning</li>
-              <li>Spray wax sealant</li>
-              <li>Exterior glass cleaned</li>
-            </ul>
-            <a class="btn btn-secondary" href="contact.html">Get a Quote</a>
-          </article>
-
-          <article class="pricing-card featured">
+          <article class="pricing-card featured" id="full-detail">
             <img class="tier-icon" src="assets/generated/icon-full-detail.png" alt="" loading="lazy" />
             <h3>Full Detail</h3>
             <p class="price">$149 <span class="unit">starting</span></p>
-            <!-- PLACEHOLDER: confirm with owner — price and inclusions for Full Detail tier (interior + exterior bundle) -->
+            <!-- PLACEHOLDER: confirm with owner — price and inclusions for Full Detail (complete interior + exterior) -->
             <ul>
-              <li>Everything in Interior Detail</li>
-              <li>Everything in Exterior Detail</li>
+              <li>Complete interior: vacuum, dash, panels, glass</li>
+              <li>Complete exterior: hand wash, wheels, wax sealant</li>
               <li>Leather/vinyl conditioning</li>
               <li>Tire shine finish</li>
             </ul>
             <a class="btn btn-primary" href="contact.html">Get a Quote</a>
           </article>
 
-          <article class="pricing-card">
+          <article class="pricing-card" id="half-detail">
+            <img class="tier-icon" src="assets/generated/icon-half-detail.png" alt="" loading="lazy" />
+            <h3>Half Detail</h3>
+            <p class="price">$89 <span class="unit">starting</span></p>
+            <!-- PLACEHOLDER: confirm with owner — price, inclusions, and definition of Half Detail (assumed: interior-only OR exterior-only, customer's choice) -->
+            <ul>
+              <li>Your choice: interior-only or exterior-only</li>
+              <li>Interior: full vacuum, wipe-down, glass</li>
+              <li>Exterior: hand wash, wheels, spray wax</li>
+              <li>Great between full details</li>
+            </ul>
+            <a class="btn btn-secondary" href="contact.html">Get a Quote</a>
+          </article>
+
+          <article class="pricing-card" id="membership">
+            <img class="tier-icon" src="assets/generated/icon-membership.png" alt="" loading="lazy" />
+            <h3>All Hands Membership</h3>
+            <p class="price">$59<span class="unit">/mo starting</span></p>
+            <!-- PLACEHOLDER: confirm with owner — membership pricing model, billing cadence, and what's included per visit; all of this block is an assumed draft -->
+            <ul>
+              <li>Recurring scheduled visits, priority booking</li>
+              <li>Member pricing on full &amp; half details</li>
+              <li>Window cleaning add-on discounts</li>
+              <li>Pause or cancel anytime</li>
+            </ul>
+            <a class="btn btn-secondary" href="contact.html">Get a Quote</a>
+          </article>
+
+          <article class="pricing-card" id="window-cleaning">
             <img class="tier-icon" src="assets/generated/icon-window-cleaning.png" alt="" loading="lazy" />
             <h3>Window Cleaning</h3>
             <p class="price">$99 <span class="unit">starting</span></p>

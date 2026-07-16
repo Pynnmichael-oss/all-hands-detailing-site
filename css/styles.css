@@ -330,12 +330,152 @@ select:focus-visible {
   color: var(--color-navy);
 }
 
-.hero-highlight img {
+/* Anchor targets sit below the sticky header — offset jumps so headings aren't hidden */
+[id] {
+  scroll-margin-top: 110px;
+}
+
+/* -------------------------------------------------------------------------
+   Home: "Our Services" quick-glance cards
+   ------------------------------------------------------------------------- */
+.svc-grid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .svc-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .svc-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.svc-card {
+  display: block;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.svc-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: var(--color-accent);
+}
+
+.svc-card .icon {
+  display: flex;
+  justify-content: center;
+  color: var(--color-accent);
+  margin-bottom: var(--space-1);
+}
+
+.svc-card .icon svg {
+  width: 44px;
+  height: 44px;
+}
+
+.svc-card h3 {
+  margin-bottom: 0.35rem;
+}
+
+.svc-card p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.svc-card .svc-price {
+  color: var(--color-navy);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+/* -------------------------------------------------------------------------
+   Home: expanded service breakouts (alternating media/text)
+   ------------------------------------------------------------------------- */
+.svc-details {
+  padding-top: 0;
+}
+
+.svc-detail {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: 1fr;
+  align-items: center;
+  padding: var(--space-3) 0;
+}
+
+@media (min-width: 768px) {
+  .svc-detail {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+  }
+
+  /* Alternate direction: even sections put the image on the right */
+  .svc-detail:nth-of-type(even) .svc-detail-media {
+    order: 2;
+  }
+}
+
+.svc-detail-media img {
   display: block;
   width: 100%;
-  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.text-link {
+  font-weight: 600;
+  color: var(--color-accent-dark);
+  text-decoration: none;
+}
+
+.text-link::after {
+  content: " →";
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+/* -------------------------------------------------------------------------
+   Home: gallery teaser / final CTA banner
+   ------------------------------------------------------------------------- */
+.gallery-teaser {
+  text-align: center;
+}
+
+.gallery-teaser img {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+}
+
+.teaser-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-top: var(--space-3);
 }
 
 /* -------------------------------------------------------------------------
@@ -524,16 +664,25 @@ select:focus-visible {
   max-width: 640px;
 }
 
-/* 2 columns on mobile, 3 on desktop; every tile a consistent 4:3 crop */
+/* Before/After rows: 3 aligned columns per row so column N matches across rows.
+   Kept 3-across at every width (smaller gap on mobile) to preserve the pairing. */
+.gallery-row-label {
+  margin: var(--space-4) 0 var(--space-2);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+}
+
 .gallery-grid {
   display: grid;
-  gap: var(--space-3);
-  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 @media (min-width: 1024px) {
   .gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-4);
   }
 }
@@ -620,6 +769,42 @@ select:focus-visible {
    ------------------------------------------------------------------------- */
 .about-content {
   max-width: 720px;
+}
+
+.about-content h2 {
+  margin-top: var(--space-4);
+}
+
+.team-card {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: 1fr;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (min-width: 640px) {
+  .team-card {
+    grid-template-columns: 220px 1fr;
+    align-items: start;
+  }
+}
+
+/* Neutral placeholder slot — intentionally NOT a photo of a person */
+.photo-placeholder {
+  aspect-ratio: 1 / 1;
+  background: #d9dde2;
+  border: 1px dashed var(--color-text-muted);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  text-align: center;
 }
 
 /* -------------------------------------------------------------------------

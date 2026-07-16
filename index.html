@@ -53,10 +53,136 @@
       </div>
     </section>
 
-    <section class="hero-highlight">
+    <section class="services-glance">
       <div class="container">
-        <!-- PLACEHOLDER: confirm with owner — Higgsfield-generated stock-style image, not a real photo of the business's work; see REVIEW-CHECKLIST.md -->
-        <img src="assets/generated/hero-02.png" alt="Close-up of a freshly detailed car's glossy exterior with water beading on the surface" loading="lazy" />
+        <h2>Our Services</h2>
+        <!-- PLACEHOLDER: confirm with owner — service names, one-line descriptions, and starting
+             prices below are draft placeholders; services.html is the single source of truth for
+             exact pricing and inclusions. See REVIEW-CHECKLIST.md. -->
+        <div class="svc-grid">
+          <a class="svc-card" href="#svc-full-detail">
+            <span class="icon" aria-hidden="true">
+              <!-- four-point sparkle: the complete treatment -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l2 5.6L20 10.5l-6 1.9L12 18l-2-5.6L4 10.5l6-1.9L12 3Z" />
+                <path d="M18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2Z" />
+              </svg>
+            </span>
+            <h3>Full Detail</h3>
+            <p>Complete interior and exterior, bumper to bumper.</p>
+            <p class="svc-price">From $149</p>
+          </a>
+          <a class="svc-card" href="#svc-half-detail">
+            <span class="icon" aria-hidden="true">
+              <!-- split circle: half the package -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 3v18" />
+                <path d="M15.5 8.5 19 12l-3.5 3.5" />
+              </svg>
+            </span>
+            <h3>Half Detail</h3>
+            <p>Interior-only or exterior-only — your pick.</p>
+            <p class="svc-price">From $89</p>
+          </a>
+          <a class="svc-card" href="#svc-membership">
+            <span class="icon" aria-hidden="true">
+              <!-- membership card -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="M3 9.5h18" />
+                <path d="M6.5 14.5h4" />
+                <circle cx="16.5" cy="14.5" r="1.4" />
+              </svg>
+            </span>
+            <h3>All Hands Membership</h3>
+            <p>Scheduled visits and member pricing, all year.</p>
+            <p class="svc-price">From $59/mo</p>
+          </a>
+          <a class="svc-card" href="#svc-window-cleaning">
+            <span class="icon" aria-hidden="true">
+              <!-- four-pane window -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="1.5" />
+                <path d="M12 4v16" />
+                <path d="M4 12h16" />
+              </svg>
+            </span>
+            <h3>Window Cleaning</h3>
+            <p>Streak-free glass for your home or business.</p>
+            <p class="svc-price">From $99</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="svc-details">
+      <div class="container">
+        <!-- PLACEHOLDER: confirm with owner — all four teaser paragraphs below are draft
+             marketing copy; images are Higgsfield-generated stock-style, not real photos of
+             this business's work. See REVIEW-CHECKLIST.md. -->
+        <article class="svc-detail" id="svc-full-detail">
+          <div class="svc-detail-media">
+            <img src="assets/generated/gallery-after-03.png" alt="SUV with a spotless interior and gleaming exterior after a full detail" loading="lazy" />
+          </div>
+          <div class="svc-detail-body">
+            <h3>Full Detail</h3>
+            <p>
+              The whole vehicle, done right in one visit: a complete interior
+              deep clean plus a full exterior hand wash, wheels, and protective
+              wax sealant. It's the closest thing to driving off the showroom
+              floor without the payment.
+            </p>
+            <a class="text-link" href="services.html#full-detail">See full pricing &amp; details</a>
+          </div>
+        </article>
+
+        <article class="svc-detail" id="svc-half-detail">
+          <div class="svc-detail-media">
+            <img src="assets/generated/gallery-after-01.png" alt="Spotless vacuumed car interior with streak-free glass" loading="lazy" />
+          </div>
+          <div class="svc-detail-body">
+            <h3>Half Detail</h3>
+            <p>
+              Only need one side of the job? Choose interior-only or
+              exterior-only and get the same attention to detail at a lighter
+              price. A popular pick between full details or before selling a
+              vehicle.
+            </p>
+            <a class="text-link" href="services.html#half-detail">See full pricing &amp; details</a>
+          </div>
+        </article>
+
+        <article class="svc-detail" id="svc-membership">
+          <div class="svc-detail-media">
+            <img src="assets/generated/gallery-after-02.png" alt="Glossy freshly washed black car with shining wheels" loading="lazy" />
+          </div>
+          <div class="svc-detail-body">
+            <h3>All Hands Membership</h3>
+            <p>
+              Keep your vehicle looking detailed year-round without thinking
+              about it. Members get recurring scheduled visits, priority
+              booking, and member pricing on every service — pause or cancel
+              anytime.
+            </p>
+            <a class="text-link" href="services.html#membership">See full pricing &amp; details</a>
+          </div>
+        </article>
+
+        <article class="svc-detail" id="svc-window-cleaning">
+          <div class="svc-detail-media">
+            <img src="assets/generated/gallery-after-04.png" alt="Crystal-clear, streak-free house windows after professional cleaning" loading="lazy" />
+          </div>
+          <div class="svc-detail-body">
+            <h3>Window Cleaning</h3>
+            <p>
+              The same care we put into paint and interiors, applied to the
+              glass on your home or storefront. Screens, sills, and tracks
+              included — just clear, streak-free windows inside and out.
+            </p>
+            <a class="text-link" href="services.html#window-cleaning">See full pricing &amp; details</a>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -122,6 +248,18 @@
         <noscript>
           <p>Reviews require JavaScript to display in this demo.</p>
         </noscript>
+      </div>
+    </section>
+
+    <section class="gallery-teaser">
+      <div class="container">
+        <h2>See the Difference</h2>
+        <!-- PLACEHOLDER: confirm with owner — Higgsfield-generated stock-style image, not a real photo of the business's work; see REVIEW-CHECKLIST.md -->
+        <img src="assets/generated/hero-02.png" alt="Close-up of a freshly detailed car's glossy exterior with water beading on the surface" loading="lazy" />
+        <div class="teaser-actions">
+          <a class="btn btn-primary" href="gallery.html">View Before &amp; After Gallery</a>
+          <a class="btn btn-secondary" href="contact.html">Get a Free Quote</a>
+        </div>
       </div>
     </section>
   </main>
