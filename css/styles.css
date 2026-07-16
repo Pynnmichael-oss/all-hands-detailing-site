@@ -984,6 +984,29 @@ select:focus-visible {
 }
 
 /* -------------------------------------------------------------------------
+   Booking embed slot (Jobber iframe goes here — see docs/jobber-integration.md)
+   ------------------------------------------------------------------------- */
+.booking-embed {
+  margin-bottom: var(--space-4);
+}
+
+/* Keep whatever gets embedded responsive at every breakpoint —
+   Jobber's snippet ships with a fixed width; these rules override it. */
+.booking-embed iframe {
+  display: block;
+  width: 100% !important;
+  max-width: 100%;
+  border: 0;
+  border-radius: var(--radius);
+}
+
+.booking-embed-note {
+  margin: var(--space-1) 0 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* -------------------------------------------------------------------------
    Contact / form
    ------------------------------------------------------------------------- */
 .contact-layout {

@@ -43,7 +43,20 @@
         <h1>Get a Free Quote</h1>
         <p>Tell us about your vehicle or windows and what you're looking for, and we'll get back to you with a quote.</p>
 
-        <div class="contact-layout">
+        <div id="jobber-booking" class="booking-embed">
+          <!-- PLACEHOLDER: Jobber online booking embed — owner must create a
+               Jobber account (Core plan or higher), build a request form with
+               a booking question enabled, then paste the provided iframe embed
+               code here, replacing the fallback link below. See
+               REVIEW-CHECKLIST.md ("Functional Blockers") and
+               docs/jobber-integration.md for the full steps. -->
+          <a href="#contact-form" class="btn btn-primary" id="booking-fallback-link">
+            Request a Booking
+          </a>
+          <p class="booking-embed-note">Online booking is coming soon — for now, use the request form below and we'll confirm your slot by email or phone.</p>
+        </div>
+
+        <div class="contact-layout" id="contact-form">
           <!--
             PLACEHOLDER: confirm with owner — Formspree endpoint ID below (xxxxxxxx)
             is a placeholder. A real Formspree (or equivalent) account must be
@@ -94,7 +107,7 @@
               anyway — we may still be able to help.
             </p>
             <h2>Contact Info</h2>
-            <p>411 S Elgin Ave, Tulsa, OK 74120</p>
+            <p>411 S Elgin Ave, Tulsa, OK 74120<br />Drop-off &amp; pick-up available at this location.</p>
             <!-- PLACEHOLDER: confirm with owner — real phone/email/hours not yet provided (address above is confirmed) -->
             <p>(918) 555-0123<br />hello@allhandsdetailing.example<br />Mon–Sat, 8am–6pm</p>
           </aside>
