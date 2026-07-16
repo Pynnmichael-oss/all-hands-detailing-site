@@ -83,15 +83,17 @@ const jobs = [
     aspect_ratio: '4:3',
     prompt: `Photo of the same style generic SUV after a complete detail — spotless interior and gleaming exterior, driveway setting. ${STYLE_SUFFIX}`,
   },
+  // Window cleaning is home/business windows (scope confirmed 2026-07-16);
+  // the STYLE_SUFFIX car-specific clauses are harmless no-ops here.
   {
     filename: 'gallery-before-04.png',
     aspect_ratio: '4:3',
-    prompt: `Photo of a generic sedan with dull, faded exterior paint before ceramic coating. ${STYLE_SUFFIX}`,
+    prompt: `Photo of a residential house's large exterior windows covered in dust, water spots, and streaks, before professional window cleaning, suburban home exterior. ${STYLE_SUFFIX}`,
   },
   {
     filename: 'gallery-after-04.png',
     aspect_ratio: '4:3',
-    prompt: `Photo of the same style generic sedan with a deep glossy reflective ceramic-coated finish, water beading off the hood, plain unbranded front grille. ${STYLE_SUFFIX}`,
+    prompt: `Photo of the same style residential house's large exterior windows perfectly clean and streak-free after professional window cleaning, crystal-clear glass reflecting blue sky, suburban home exterior. ${STYLE_SUFFIX}`,
   },
 
   // Service tier icons/imagery (4)
@@ -111,9 +113,9 @@ const jobs = [
     prompt: `Icon representing a full car detail — a sparkling car silhouette with shine lines. ${ICON_STYLE_SUFFIX}`,
   },
   {
-    filename: 'icon-ceramic-coating.png',
+    filename: 'icon-window-cleaning.png',
     aspect_ratio: '1:1',
-    prompt: `Icon representing ceramic coating protection — a car silhouette under a glossy shield. ${ICON_STYLE_SUFFIX}`,
+    prompt: `Icon representing professional window cleaning — a squeegee wiping a sparkling clean window pane. ${ICON_STYLE_SUFFIX}`,
   },
 ];
 

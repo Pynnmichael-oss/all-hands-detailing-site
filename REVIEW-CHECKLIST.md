@@ -5,9 +5,22 @@ This is a running log of every placeholder fact/copy in the site. Add a line her
 treated as fact-checked or ready for real customers until the owner confirms it and
 the line is checked off.
 
+## Confirmed
+- [x] **Logo — CONFIRMED (2026-07-16).** Real logo files received and integrated:
+      `assets/logo/all-hands-logo-black.png` / `all-hands-logo-white.png` (white
+      variant used in header + footer against the navy background), plus
+      `favicon.ico`, `apple-touch-icon.png`, and `icon-512.png` at repo root,
+      wired into the `<head>` of all five pages. Footer carries the official
+      "The People's Company" tagline as part of the brand lockup.
+- [x] **Service scope — CONFIRMED (2026-07-16).** The site covers **Mobile
+      Detailing and Window Cleaning only**. Ceramic coating, PPF, transportation,
+      and moving services are **permanently dropped from scope** — not pending
+      owner confirmation. Do not re-add them.
+
 ## Global (in every page footer + `css/styles.css`)
-- [ ] Brand colors/logo — placeholder navy (`#101826`) / charcoal (`#2d333d`) /
-      amber accent (`#d98324`) in `css/styles.css` `:root`. No real logo yet.
+- [ ] Brand colors — placeholder navy (`#101826`) / charcoal (`#2d333d`) /
+      amber accent (`#d98324`) in `css/styles.css` `:root`; they match the logo
+      reasonably well but exact brand values not confirmed by owner.
 - [ ] Phone number — placeholder `(918) 555-0123` in every page footer and on
       `contact.html`.
 - [ ] Email — placeholder `hello@allhandsdetailing.example` on `contact.html`.
@@ -30,25 +43,32 @@ the line is checked off.
       owner provides them and grants usage rights.
 
 ## Services (`services.html`)
-- [ ] Four package tiers and their bullet inclusions (Interior Detail, Exterior
-      Detail, Full Detail, Ceramic Coating & PPF) — names/inclusions/pricing are
+- [ ] Four service tiers and their bullet inclusions (Interior Detail, Exterior
+      Detail, Full Detail, Window Cleaning) — names/inclusions/pricing are
       all placeholder draft content.
-- [ ] Pricing: Interior $89, Exterior $79, Full Detail $149, Ceramic Coating &
-      PPF from $599 — all placeholder numbers, not owner-confirmed.
-- [ ] Confirm whether Ceramic Coating and PPF should be split into two separate
-      packages/prices.
+- [ ] Pricing: Interior $89, Exterior $79, Full Detail $149, Window Cleaning
+      $99 — all placeholder numbers, not owner-confirmed.
+- [ ] Window Cleaning tier — confirm whether it covers home windows, business
+      storefronts, or both, and what's included (screens, sills/tracks,
+      interior + exterior).
+- [x] ~~Confirm whether Ceramic Coating and PPF should be split into two separate
+      packages/prices.~~ **Resolved 2026-07-16: ceramic coating & PPF are
+      permanently out of scope** (see Confirmed section) — removed from the
+      tier grid, deposit policy, meta descriptions, and all page copy.
 - [ ] Deposit policy paragraph — paraphrased, original-wording placeholder based
-      on a pattern observed at a related domain (~$50 standard / ~30% ceramic
-      coating & PPF). NOT confirmed as this business's actual policy.
+      on a pattern observed at a related domain (~$50 deposit applied to total).
+      NOT confirmed as this business's actual policy. (Ceramic/PPF 30% deposit
+      clause removed with the scope change.)
 - [ ] Rain-day policy paragraph — paraphrased, original-wording placeholder, not
       confirmed as this business's actual policy.
-- [ ] Four tier icons (`assets/generated/icon-*.png`) are Higgsfield-generated
-      stock-style illustrations, not real branded imagery. Fine to keep as
-      generic icons, or swap once the owner has real branding.
+- [ ] Four tier icons (`assets/generated/icon-*.png`, incl. new
+      `icon-window-cleaning.png`) are Higgsfield-generated stock-style
+      illustrations, not real branded imagery. Fine to keep as generic icons,
+      or swap once the owner has real branding.
 
 ## Gallery (`gallery.html`)
 - [ ] All 8 gallery images (4 before/after pairs: Interior Deep Clean, Exterior
-      Wash & Wax, Full Detail, Ceramic Coating — `assets/generated/gallery-*.png`)
+      Wash & Wax, Full Detail, Window Cleaning — `assets/generated/gallery-*.png`)
       are Higgsfield-generated stock-style images, wired to a click-to-enlarge
       lightbox (`js/main.js`). These are NOT real photos of this business's work
       or real customer vehicles — they must be swapped for real before/after

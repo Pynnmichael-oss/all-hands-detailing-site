@@ -2,14 +2,52 @@
 
 > This file is the build brief for Claude Code. Read it fully before scaffolding anything.
 > This is a **demo build**, not yet reviewed by the business owner. Every business-specific
-> fact (pricing, hours, phone, address, exact service list, policy wording) is a **placeholder**
+> fact (pricing, hours, phone, address, policy wording) is a **placeholder**
 > until the owner confirms it. Do not present anything in this repo as fact-checked.
+> **Confirmed so far (2026-07-16):** the real logo (see §0) and the service scope —
+> **Mobile Detailing + Window Cleaning only**. Ceramic coating, PPF, transportation,
+> and moving services are permanently out of scope; do not re-add them.
+
+## 0. Working in This Repo (read first)
+
+**Commands** — there is no build step, bundler, linter, or test suite; the site is plain
+static HTML/CSS/JS served as-is:
+- Preview locally: `python3 -m http.server` from the repo root (or open the HTML files
+  directly — all internal links are relative).
+- Regenerate all AI imagery: `npm run generate-assets` (needs the global `higgsfield`
+  CLI, authenticated via `higgsfield auth login` — see §6).
+- Regenerate specific images: `node scripts/generate-assets.js <filename>.png ...`
+- Visual check without a browser window: `google-chrome --headless --disable-gpu
+  --window-size=1280,900 --screenshot=/tmp/shot.png file://$PWD/index.html`
+
+**Architecture:**
+- Five pages at repo root (`index`, `services`, `gallery`, `about`, `contact`), one
+  shared stylesheet (`css/styles.css`), one script (`js/main.js`).
+- **No templating** — the header/nav, footer, and favicon `<link>` block are duplicated
+  verbatim in every page. Any change to those blocks must be applied to all five files.
+- All brand colors/spacing live in `:root` custom properties at the top of
+  `css/styles.css`; change theme there only.
+- `js/main.js` does two things: mobile nav toggle (`.nav-toggle`/`.site-nav.is-open`)
+  and a lightbox built at runtime from any element carrying `data-lightbox`.
+- Real brand assets: `assets/logo/` (black + white logo variants — header/footer use
+  the **white** one because both bars are navy) and `favicon.ico` /
+  `apple-touch-icon.png` / `icon-512.png` at repo root.
+- AI-generated placeholder imagery lives in `assets/generated/`, produced by
+  `scripts/generate-assets.js` (prompt list lives in that file). `public/` is an
+  untracked drop-zone for raw files from the owner — not referenced by the site.
+
+**Placeholder protocol (the one hard rule):** every unconfirmed business fact in the
+HTML carries a `<!-- PLACEHOLDER: confirm with owner — ... -->` comment **and** a
+matching line in `REVIEW-CHECKLIST.md`, added as you write it, not batched later.
+When a fact gets confirmed, move/mark its checklist line as confirmed rather than
+deleting it.
 
 ## 1. Context (unconfirmed, gathered via web research)
 - Business: mobile auto detailing, Tulsa, OK — works at the customer's location.
 - A related entity called "All Hands" (the "people's company") also markets window washing
-  and broader home/lifestyle services. **Scope for this site is auto detailing only** unless
-  the owner says otherwise later.
+  and broader home/lifestyle services. ~~Scope for this site is auto detailing only~~
+  **Superseded 2026-07-16: scope is Mobile Detailing + Window Cleaning.** "The People's
+  Company" is part of the official logo lockup and appears as a footer tagline only.
 - A related domain showed a deposit pattern: ~$50 non-refundable deposit for standard
   detailing/tint, ~30% non-refundable deposit for ceramic coating/PPF. Treat this as a
   *plausible placeholder pattern only* — do not present as this business's actual policy,
@@ -38,8 +76,8 @@
 - **Home** — hero, value prop, primary CTA (book/contact), trust signals (placeholder
   testimonials, clearly marked as placeholder in an HTML comment and visually distinct
   enough that no one mistakes them for real reviews).
-- **Services** — package tiers: interior / exterior / full detail / ceramic coating & PPF.
-  Placeholder pricing throughout.
+- **Services** — package tiers: interior / exterior / full detail / window cleaning
+  (ceramic coating & PPF dropped from scope 2026-07-16). Placeholder pricing throughout.
 - **Gallery** — before/after-style imagery, Higgsfield-generated only (see §6). No scraped
   real photos from the business's social accounts.
 - **About** — placeholder bio/mission copy, marked for owner rewrite.

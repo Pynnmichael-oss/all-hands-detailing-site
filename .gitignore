@@ -3,3 +3,7 @@
 node_modules/
 .DS_Store
 *.log
+
+# Raw asset drop-zone from the owner (zips, originals) — curated copies get
+# committed under assets/ instead.
+public/

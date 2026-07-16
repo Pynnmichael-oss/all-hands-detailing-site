@@ -179,20 +179,15 @@ select:focus-visible {
 }
 
 .brand {
-  font-size: 1.15rem;
-  font-weight: 700;
+  display: block;
   text-decoration: none;
-  color: #fff;
-  line-height: 1.1;
 }
 
-.brand span {
+/* White logo variant — header/nav background is dark navy */
+.brand-logo {
   display: block;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--color-accent);
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  max-height: 52px;
+  width: auto;
 }
 
 .nav-toggle {
@@ -669,8 +664,21 @@ select:focus-visible {
   }
 }
 
-.site-footer .brand {
-  color: #fff;
+/* White logo variant — footer background is dark navy */
+.footer-logo {
+  display: block;
+  max-height: 84px;
+  width: auto;
+  margin-bottom: var(--space-1);
+}
+
+.footer-tagline {
+  margin: 0 0 var(--space-1);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
 }
 
 .footer-nav {

@@ -1,7 +1,12 @@
 # scripts/
 
-The Higgsfield asset-generation script (`generate-assets.js` or `.py`) goes here.
-See `CLAUDE.md` §6 for requirements — build-time only, reads `HIGGSFIELD_API_KEY`
-from a git-ignored local `.env`, never referenced client-side.
+`generate-assets.js` — build-time Higgsfield asset generation (see `CLAUDE.md` §6).
 
-Not yet implemented — this is the next build step after page skeletons.
+Uses the global `higgsfield` CLI (`flux_kontext` model), authenticated via
+`higgsfield auth login` — no API key or `.env` involved. Never referenced
+client-side.
+
+- Regenerate everything: `npm run generate-assets`
+- Regenerate specific files: `node scripts/generate-assets.js <filename>.png ...`
+
+Outputs land in `assets/generated/`; commit the images, not any job-status output.
